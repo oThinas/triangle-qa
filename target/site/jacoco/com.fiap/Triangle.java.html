@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Triangle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">triangle</a> &gt; <a href="index.source.html" class="el_package">com.fiap</a> &gt; <span class="el_source">Triangle.java</span></div><h1>Triangle.java</h1><pre class="source lang-java linenums">package com.fiap;
+
+public class Triangle {
+  private double side1;
+  private double side2;
+  private double side3;
+
+<span class="fc" id="L8">  public Triangle(double side1, double side2, double side3) throws IllegalArgumentException {</span>
+<span class="pc bpc" id="L9" title="2 of 6 branches missed.">    if (side1 &lt;= 0 || side2 &lt;= 0 || side3 &lt;= 0) {</span>
+<span class="fc" id="L10">      throw new IllegalArgumentException(&quot;Os lados do triângulo devem ser maiores que zero.&quot;);</span>
+<span class="pc bpc" id="L11" title="2 of 6 branches missed.">    } else if (side1 + side2 &lt;= side3 || side2 + side3 &lt;= side1 || side1 + side3 &lt;= side2) {</span>
+<span class="fc" id="L12">      throw new IllegalArgumentException(&quot;A soma de dois lados deve ser maior que o terceiro lado.&quot;);</span>
+    }
+
+<span class="fc" id="L15">    this.side1 = side1;</span>
+<span class="fc" id="L16">    this.side2 = side2;</span>
+<span class="fc" id="L17">    this.side3 = side3;</span>
+<span class="fc" id="L18">  }</span>
+
+  public String getType() {
+<span class="fc bfc" id="L21" title="All 4 branches covered.">    if (this.side1 == this.side2 &amp;&amp; this.side2 == this.side3) {</span>
+<span class="fc" id="L22">      return &quot;Equilátero&quot;;</span>
+<span class="pc bpc" id="L23" title="2 of 6 branches missed.">    } else if (this.side1 == this.side2 || this.side2 == this.side3 || this.side1 == this.side3) {</span>
+<span class="fc" id="L24">      return &quot;Isósceles&quot;;</span>
+    } else {
+<span class="fc" id="L26">      return &quot;Escaleno&quot;;</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
