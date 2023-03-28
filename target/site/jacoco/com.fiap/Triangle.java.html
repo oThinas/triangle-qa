@@ -6,9 +6,9 @@ public class Triangle {
   private double side3;
 
 <span class="fc" id="L8">  public Triangle(double side1, double side2, double side3) throws IllegalArgumentException {</span>
-<span class="pc bpc" id="L9" title="2 of 6 branches missed.">    if (side1 &lt;= 0 || side2 &lt;= 0 || side3 &lt;= 0) {</span>
+<span class="fc bfc" id="L9" title="All 6 branches covered.">    if (side1 &lt;= 0 || side2 &lt;= 0 || side3 &lt;= 0) {</span>
 <span class="fc" id="L10">      throw new IllegalArgumentException(&quot;Os lados do triângulo devem ser maiores que zero.&quot;);</span>
-<span class="pc bpc" id="L11" title="2 of 6 branches missed.">    } else if (side1 + side2 &lt;= side3 || side2 + side3 &lt;= side1 || side1 + side3 &lt;= side2) {</span>
+<span class="fc bfc" id="L11" title="All 6 branches covered.">    } else if (side1 + side2 &lt;= side3 || side2 + side3 &lt;= side1 || side1 + side3 &lt;= side2) {</span>
 <span class="fc" id="L12">      throw new IllegalArgumentException(&quot;A soma de dois lados deve ser maior que o terceiro lado.&quot;);</span>
     }
 
@@ -20,7 +20,7 @@ public class Triangle {
   public String getType() {
 <span class="fc bfc" id="L21" title="All 4 branches covered.">    if (this.side1 == this.side2 &amp;&amp; this.side2 == this.side3) {</span>
 <span class="fc" id="L22">      return &quot;Equilátero&quot;;</span>
-<span class="pc bpc" id="L23" title="2 of 6 branches missed.">    } else if (this.side1 == this.side2 || this.side2 == this.side3 || this.side1 == this.side3) {</span>
+<span class="fc bfc" id="L23" title="All 6 branches covered.">    } else if (this.side1 == this.side2 || this.side2 == this.side3 || this.side1 == this.side3) {</span>
 <span class="fc" id="L24">      return &quot;Isósceles&quot;;</span>
     } else {
 <span class="fc" id="L26">      return &quot;Escaleno&quot;;</span>
